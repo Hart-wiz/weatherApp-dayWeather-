@@ -14,7 +14,7 @@
 main {
   background-color: rgb(8, 119, 119);
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,6 +37,13 @@ main {
   outline: none;
   padding: 0 5rem;
   font-size: 2rem;
+}
+
+.search-box input::placeholder {
+  text-align: center;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.3rem;
 }
 
 .search-box button {
@@ -90,9 +97,9 @@ main {
   display: flex;
   flex-direction: column;
   padding-top: 30px;
+  margin-left: 1rem;
   font-size: 1.4rem;
   align-self: flex-start;
-  padding-left: 30px;
 }
 @media (max-width: 390px) {
   body {
@@ -102,20 +109,46 @@ main {
     height: 100vh;
     padding: 3rem;
   }
+  .geo {
+    margin-left: 0.5rem;
+  }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   body {
     background-color: rgb(1, 17, 17);
     display: flex;
+
+    align-items: center;
     justify-content: center;
-    align-content: center;
   }
   main {
-    width: 900px;
-    height: 600px;
+    width: 40vw;
+    height: 70vh;
+
+    margin-top: 3rem;
+
+    color: white;
+    padding: 8rem;
+  }
+  .search-box input {
+    width: 40%;
+    border-radius: 40px;
+    padding-top: 4rem;
+    padding-bottom: 0;
+    font-size: 2rem;
+  }
+
+  .search-box input {
+    width: 60%;
+    border-radius: 90px;
+    border: none;
+    outline: none;
+    padding: 2rem 5rem;
+    font-size: 1.5rem;
   }
   .rate-container {
     gap: 300px;
+    padding-top: 0;
   }
 }
